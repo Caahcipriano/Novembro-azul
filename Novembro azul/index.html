@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Novembro Azul 2025 — Conscientização sobre a saúde do homem, prevenção e diagnóstico precoce do câncer de próstata." />
+  <title>Novembro Azul 2025 - Saúde do Homem</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    :root {
+      --azul-principal: #004b87;
+      --azul-escuro: #002f5e;
+      --azul-claro: #e6f0fa;
+      --branco: #ffffff;
+      --cinza-escuro: #333333;
+      --cinza-claro: #f5f5f5;
+    }
+
+    [data-theme='dark'] {
+      --azul-principal: #87b8ff;
+      --azul-escuro: #001e3f;
+      --azul-claro: #1b2838;
+      --branco: #eaeaea;
+      --cinza-escuro: #eaeaea;
+      --cinza-claro: #2a2a2a;
+      background-color: var(--azul-claro);
+      color: var(--branco);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--azul-claro);
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+      transition: background 0.5s, color 0.5s;
+      scroll-behavior: smooth;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--azul-principal);
+      color: var(--branco);
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro));
+      color: var(--branco);
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: var(--branco);
+      color: var(--azul-principal);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--azul-principal);
+      color: var(--branco);
+    }
+
+    nav {
+      background-color: var(--branco);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.5s;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--azul-principal);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--azul-claro);
+      outline: none;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      color: var(--azul-principal);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .card {
+      background-color: var(--branco);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      margin: 2rem auto;
+    }
+
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    .share-section {
+      margin-top: 1rem;
+    }
+
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .share-buttons a {
+      background-color: var(--branco);
+      color: var(--azul-principal);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .share-buttons a:hover {
+      background-color: var(--azul-principal);
+      color: var(--branco);
+      transform: scale(1.1);
+    }
+
+    /* Botão flutuante Voltar ao topo */
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--azul-principal);
+      color: var(--branco);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      z-index: 200;
+    }
+
+    #btnTopo:hover {
+      background-color: var(--azul-escuro);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav a {
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header role="banner">
+    <h1>💙 Novembro Azul 2025</h1>
+    <p>Conscientização sobre o câncer de próstata e a saúde do homem</p>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Alternar modo escuro">🌙 Modo Escuro</button>
+  </header>
+
+  <nav role="navigation" aria-label="Navegação principal">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#epidemiologia">Epidemiologia</a></li>
+      <li><a href="#impacto-negros">População Negra</a></li>
+      <li><a href="#prevencao">Prevenção</a></li>
+      <li><a href="#diagnostico">Diagnóstico</a></li>
+      <li><a href="#fontes">Fontes</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo" role="main">
+    <section id="sobre">
+      <h2 class="section-title">O que é o Novembro Azul</h2>
+      <div class="card">
+        <p>O <strong>Novembro Azul</strong> é uma campanha mundial dedicada à conscientização sobre a saúde do homem, com foco especial no <strong>câncer de próstata</strong>. Criada na Austrália em 2003 e difundida no Brasil desde 2008, busca quebrar tabus e incentivar o cuidado preventivo.</p>
+      </div>
+    </section>
+
+    <section id="epidemiologia">
+      <h2 class="section-title">Dados Epidemiológicos (Brasil – 2025)</h2>
+      <div class="card">
+        <p>Segundo o <strong>INCA</strong>, o câncer de próstata é o mais incidente entre os homens brasileiros, excetuando-se o de pele não melanoma.</p>
+        <ul>
+          <li><strong>71.730 novos casos</strong> estimados por ano (2023–2025).</li>
+          <li>Taxa de incidência: <strong>67,86 casos por 100 mil homens</strong>.</li>
+          <li>Mais frequente no <strong>Sul e Sudeste</strong> do país.</li>
+          <li>A maioria dos casos ocorre após os <strong>65 anos</strong>.</li>
+        </ul>
+        <canvas id="graficoIncidencia" aria-label="Gráfico de incidência por região" role="img"></canvas>
+      </div>
+    </section>
+
+    <section id="impacto-negros">
+      <h2 class="section-title">Maior Agressividade em Homens Negros</h2>
+      <div class="card">
+        <p>Pesquisas do <strong>INCA</strong>, <strong>OMS</strong> e <strong>Sociedade Brasileira de Urologia</strong> mostram que o câncer de próstata é <strong>mais agressivo e precoce em homens negros</strong>.</p>
+        <ul>
+          <li>Maior probabilidade de diagnóstico em estágios avançados.</li>
+          <li>Maior mortalidade associada à doença.</li>
+          <li>Fatores genéticos e sociais influenciam o risco aumentado.</li>
+          <li>Homens negros devem iniciar o rastreamento a partir dos <strong>45 anos</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="prevencao">
+      <h2 class="section-title">Prevenção</h2>
+      <div class="card">
+        <ul>
+          <li>Alimentação rica em frutas, verduras e fibras.</li>
+          <li>Prática regular de atividade física.</li>
+          <li>Evitar tabagismo e consumo excessivo de álcool.</li>
+          <li>Controle do peso e exames regulares após os 50 anos (ou 45 se houver fatores de risco).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="diagnostico">
+      <h2 class="section-title">Diagnóstico e Rastreamento</h2>
+      <div class="card">
+        <p>Os principais exames são:</p>
+        <ul>
+          <li><strong>Toque retal</strong>: avalia o tamanho e consistência da próstata.</li>
+          <li><strong>PSA (Antígeno Prostático Específico)</strong>: exame de sangue que detecta alterações precoces.</li>
+        </ul>
+        <p>Quando diagnosticado cedo, o câncer de próstata tem <strong>índice de cura superior a 98%</strong>.</p>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <h2 class="section-title">Fontes e Referências</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://www.gov.br/inca/pt-br/assuntos/cancer/tipos/prostata" target="_blank">INCA – Câncer de Próstata</a></li>
+          <li><a href="https://www.sbu.org.br/" target="_blank">Sociedade Brasileira de Urologia (SBU)</a></li>
+          <li><a href="https://www.who.int/" target="_blank">Organização Mundial da Saúde (OMS)</a></li>
+          <li><a href="https://www.gov.br/saude/pt-br/assuntos/novembro-azul" target="_blank">Ministério da Saúde – Novembro Azul</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>💙 Novembro Azul 2025 — Conscientização sobre a Saúde do Homem</p>
+    <p>Desenvolvido com foco em acessibilidade, inclusão e informação pública.</p>
+
+    <div class="share-section" aria-label="Compartilhe esta página">
+      <p><strong>Compartilhe:</strong></p>
+      <div class="share-buttons">
+        <a href="https://wa.me/?text=💙+Participe+do+Novembro+Azul+2025!+Saiba+mais:+https://seusite.com" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://seusite.com" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/intent/tweet?text=💙+Conscientize-se+no+Novembro+Azul+2025!+https://seusite.com" target="_blank" rel="noopener" aria-label="Compartilhar no X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+        <a href="mailto:?subject=Novembro Azul 2025&body=Saiba mais sobre prevenção e diagnóstico do câncer de próstata: https://seusite.com" aria-label="Compartilhar por e-mail"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante voltar ao topo -->
+  <button id="btnTopo" aria-label="Voltar ao topo"><i class="bi bi-arrow-up-short"></i></button>
+
+  <script>
+    // Gráfico
+    const ctx = document.getElementById('graficoIncidencia').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'],
+        datasets: [{
+          label: 'Casos por 100 mil homens',
+          data: [58.3, 73.28, 65.4, 77.89, 68.1],
+          backgroundColor: '#004B87'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          title: { display: true, text: 'Incidência por Região (Brasil – 2025)', color: '#002F5E' }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { color: '#002F5E' } },
+          x: { ticks: { color: '#002F5E' } }
+        }
+      }
+    });
+
+    // Alternância de tema
+    const toggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) document.body.dataset.theme = 'dark';
+    toggle.addEventListener('click', () => {
+      const current = document.body.dataset.theme;
+      if (current === 'dark') {
+        document.body.dataset.theme = 'light';
+        toggle.textContent = '🌙 Modo Escuro';
+      } else {
+        document.body.dataset.theme = 'dark';
+        toggle.textContent = '☀️ Modo Claro';
+      }
+    });
+
+    // Botão voltar ao topo
+    const btnTopo = document.getElementById('btnTopo');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btnTopo.style.display = 'flex';
+      } else {
+        btnTopo.style.display = 'none';
+      }
+    });
+
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
