@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Novembro Azul 2025</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --cor-fundo: #f5f9ff;
+      --cor-texto: #1a1a1a;
+      --cor-primaria: #007bff;
+    }
+    [data-tema="escuro"] {
+      --cor-fundo: #121212;
+      --cor-texto: #eaeaea;
+      --cor-primaria: #4da3ff;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--cor-fundo);
+      color: var(--cor-texto);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--cor-primaria);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header img {
+      height: 100px;
+      border-radius: 80px;
+    }
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2, h3, h4 {
+      text-align: center;
+      color: var(--cor-primaria);
+      margin-top: 25px;
+    }
+    .toggle-button {
+      background: white;
+      color: var(--cor-primaria);
+      border: none;
+      border-radius: 20px;
+      padding: 5px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .toggle-button:hover {
+      background: #e6e6e6;
+      transform: scale(1.05);
+    }
+    canvas {
+      max-width: 450px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* --- Carrossel --- */
+    .carousel-container {
+      position: relative;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .carousel-item {
+      min-width: 100%;
+      background: rgba(0,123,255,0.05);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .carousel-item h4 {
+      color: var(--cor-primaria);
+      margin-top: 0;
+      text-align: center;
+    }
+
+    /* --- Fontes compactas --- */
+    .fontes {
+      margin-top: 25px;
+      background: rgba(0,123,255,0.1);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.8em;
+      line-height: 1.3;
+    }
+    .fontes ul {
+      list-style: none;
+      padding: 0;
+      margin: 5px 0;
+    }
+    .fontes li {
+      margin-bottom: 3px;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--cor-primaria);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      margin-top: 25px;
+    }
+
+    a {
+      color: var(--cor-primaria);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Botão Voltar ao topo --- */
+    #voltarTopo {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--cor-primaria);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      display: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    #voltarTopo:hover {
+      transform: scale(1.1);
+      background: #005ec2;
+    }
+  </style>
+</head>
+<body data-tema="claro">
+  <header>
+    <h1>Novembro Azul 2025</h1>
+    <img src="selo-novembro-azul.webp" alt="Selo Novembro Azul" />
+    <button id="modo" class="toggle-button" aria-label="Alternar modo claro e escuro">
+      🌗 Modo
+    </button>
+  </header>
+
+  <main>
+    <p>
+      Durante o mês de novembro, o movimento conhecido como <strong>Novembro Azul</strong> ganha destaque em todo o mundo, chamando a atenção para os cuidados com a saúde do homem e, especialmente, para a prevenção e o diagnóstico precoce do câncer de próstata.
+      Apesar dos avanços na medicina, essa ainda é uma doença que preocupa: segundo o World Cancer Research Fund, foram registrados cerca de 1,47 milhão de novos casos de câncer de próstata em 2022, o que o coloca entre os tipos de câncer mais comuns entre os homens em escala global.
+    </p>
+    <p>
+      O Novembro Azul, portanto, vai além da cor e das campanhas: é um chamado à responsabilidade e ao autocuidado.
+      Cuidar da saúde não é sinal de fraqueza, mas de coragem. Manter hábitos saudáveis, praticar atividades físicas, ter uma alimentação equilibrada, evitar cigarros e o consumo excessivo de álcool são atitudes que fazem diferença no bem-estar e na prevenção de doenças.
+      Mais do que nunca, é preciso incentivar os homens a procurarem o serviço de saúde com regularidade e a não esperarem pelos sintomas para agir.
+    </p>
+
+    <h2>Epidemiologia</h2>
+    <p>
+      Dados do <strong>DataSUS</strong> indicam que em Juiz de Fora e região, os índices de novos diagnósticos de câncer de próstata continuam exigindo atenção e campanhas educativas:
+    </p>
+    <canvas id="grafico"></canvas>
+
+    <h2>Diagnóstico e Exames</h2>
+    <div class="carousel-container">
+      <div class="carousel-slide" id="carrossel">
+        <div class="carousel-item">
+          <h4>PSA (Antígeno Prostático Específico)</h4>
+          <p>Exame de sangue simples que avalia alterações na próstata e ajuda a detectar precocemente o câncer.</p>
+        </div>
+        <div class="carousel-item">
+          <h4>Toque Retal</h4>
+          <p>Exame rápido e indolor realizado por um profissional para verificar possíveis alterações na glândula.</p>
+        </div>
+        <div class="carousel-item">
+          <h4>Ultrassonografia de Próstata</h4>
+          <p>Indicado em casos suspeitos para avaliação mais detalhada da próstata e tecidos ao redor.</p>
+        </div>
+        <div class="carousel-item">
+          <h4>Biópsia Prostática</h4>
+          <p>Realizada quando há suspeita confirmada em exames anteriores; confirma o diagnóstico.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Prevenção e Hábitos</h2>
+    <p><em>“Cuidar de si mesmo é um ato de amor e coragem. A prevenção é o melhor caminho para uma vida longa e saudável.”</em></p>
+
+    <h3>Atividades físicas em Juiz de Fora</h3>
+    <ul>
+      <li><a href="https://www.pjf.mg.gov.br/secretarias/esporteelazer/" target="_blank">Parque da Lajinha</a> – ótimo para caminhadas e corridas.</li>
+      <li><a href="https://www.ufjf.br/cdara/" target="_blank">Campus da UFJF</a> – ambiente seguro e amplo para treinos ao ar livre.</li>
+      <li><a href="https://www.instagram.com/corridajf/" target="_blank">Grupos de corrida locais</a> – incentivo à prática em equipe.</li>
+    </ul>
+
+    <div class="fontes">
+      <strong>Fontes:</strong>
+      <ul>
+        <li><a href="https://datasus.saude.gov.br" target="_blank">Ministério da Saúde – DataSUS / TABNET</a></li>
+        <li><a href="https://www.inca.gov.br" target="_blank">Instituto Nacional de Câncer (INCA)</a></li>
+        <li><a href="https://www.wcrf.org" target="_blank">World Cancer Research Fund (WCRF)</a></li>
+        <li><a href="https://www.pjf.mg.gov.br" target="_blank">Prefeitura de Juiz de Fora</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>Novembro Azul 2025 — Conscientização e Prevenção</footer>
+
+  <button id="voltarTopo" title="Voltar ao topo">⬆️</button>
+
+  <!-- Scripts -->
+  <script>
+    // Chart.js
+    const ctx = document.getElementById('grafico').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Juiz de Fora', 'Zona da Mata', 'Região Central', 'Sul de Minas', 'Norte de Minas'],
+        datasets: [{
+          label: 'Casos de Câncer de Próstata (2024)',
+          data: [240, 480, 300, 260, 190],
+          backgroundColor: '#007bff',
+          borderRadius: 5
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false }, title: { display: true, text: 'Incidência por Região (DataSUS)', color: '#007bff' } },
+        scales: { y: { beginAtZero: true }, x: { ticks: { color: '#007bff' } } }
+      }
+    });
+
+    // Tema claro/escuro
+    document.getElementById('modo').addEventListener('click', () => {
+      const body = document.body;
+      const tema = body.getAttribute('data-tema') === 'claro' ? 'escuro' : 'claro';
+      body.setAttribute('data-tema', tema);
+    });
+
+    // Carrossel automático
+    const slide = document.getElementById("carrossel");
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % slide.children.length;
+      slide.style.transform = `translateX(-${index * 100}%)`;
+    }, 4000);
+
+    // Voltar ao topo
+    const voltarTopo = document.getElementById("voltarTopo");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) voltarTopo.style.display = "block";
+      else voltarTopo.style.display = "none";
+    });
+    voltarTopo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+</body>
+</html>
