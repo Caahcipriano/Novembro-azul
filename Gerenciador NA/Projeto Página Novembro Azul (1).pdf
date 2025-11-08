@@ -1,0 +1,638 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 7442
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 20 Tf
+23. TL
+0 g
+209.9377952755905596 799.3703149606299121 Td
+(Relatório do Projeto) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+39.6850393700787407 771.0238582677164914 Td
+(Título: Projeto Página Novembro Azul) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+39.6850393700787407 742.6774015748030706 Td
+(Prazo Final: 2025-11-10) Tj
+ET
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+0.2 0.6 0.86 rg
+0.78 G
+0. w
+0.2 0.6 0.86 rg
+40. 714.3309448818897636 73.4000000000000057 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+45. 700.8309448818897636 Td
+(Etapa) Tj
+ET
+0.2 0.6 0.86 rg
+0.78 G
+0. w
+0.2 0.6 0.86 rg
+113.4000000000000057 714.3309448818897636 71.2999999999999972 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+118.3999999999999915 700.8309448818897636 Td
+(Responsável) Tj
+ET
+0.2 0.6 0.86 rg
+0.78 G
+0. w
+0.2 0.6 0.86 rg
+184.6999999999999886 714.3309448818897636 60.5999999999999943 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+189.6999999999999886 700.8309448818897636 Td
+(Prazo) Tj
+ET
+0.2 0.6 0.86 rg
+0.78 G
+0. w
+0.2 0.6 0.86 rg
+245.3000000000000114 714.3309448818897636 60.8000000000000043 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+250.2999999999999829 700.8309448818897636 Td
+(Pontuação) Tj
+ET
+0.2 0.6 0.86 rg
+0.78 G
+0. w
+0.2 0.6 0.86 rg
+306.1000000000000227 714.3309448818897636 249.1799999999148838 -21.4999999999999964 re
+f
+BT
+/F2 10 Tf
+11.5 TL
+1. g
+311.0999999999999659 700.8309448818897636 Td
+(Plano de Risco) Tj
+ET
+0. G
+0.5670000000000001 w
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 692.8309448818897636 73.4000000000000057 -136.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 679.3309448818897636 Td
+(Conteúdo &) Tj
+T* (Acessibilidade) Tj
+T* (\(HTML\)) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+113.4000000000000057 692.8309448818897636 71.2999999999999972 -136.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+118.3999999999999915 679.3309448818897636 Td
+(Carolina,) Tj
+T* (Vanessa e) Tj
+T* (Camila) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+184.6999999999999886 692.8309448818897636 60.5999999999999943 -136.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+189.6999999999999886 679.3309448818897636 Td
+(2025-11-03) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+245.3000000000000114 692.8309448818897636 60.8000000000000043 -136.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+250.2999999999999829 679.3309448818897636 Td
+(5) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+306.1000000000000227 692.8309448818897636 249.1799999999148838 -136.5 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+311.0999999999999659 679.3309448818897636 Td
+(* 1. Estrutura Base: Criar a estrutura HTML \(<head>,) Tj
+T* (<body>, header, nav, main, footer\).) Tj
+T* (* 2. Conteúdo Estático: Inserir todo o texto, títulos e) Tj
+T* (parágrafos nas seções \(Sobre, Epidemiologia,) Tj
+T* (Prevenção, Diagnóstico\).) Tj
+T* (* 3. Acessibilidade Estrutural: Implementar o skip-link,) Tj
+T* (atribuir role e aria-label para o carrossel, navegação e) Tj
+T* (rodapé.) Tj
+T* (* 4. Inclusão de Scripts Externos: Adicionar as tags) Tj
+T* (<script> para o Chart.js e o VLibras, e o link para os) Tj
+T* (ícones do Bootstrap.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 556.3309448818897636 73.4000000000000057 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 542.8309448818897636 Td
+(Design &) Tj
+T* (Estilização) Tj
+T* (\(CSS\)) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+113.4000000000000057 556.3309448818897636 71.2999999999999972 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+118.3999999999999915 542.8309448818897636 Td
+(Camila) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+184.6999999999999886 556.3309448818897636 60.5999999999999943 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+189.6999999999999886 542.8309448818897636 Td
+(2025-11-04) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+245.3000000000000114 556.3309448818897636 60.8000000000000043 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+250.2999999999999829 542.8309448818897636 Td
+(5) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+306.1000000000000227 556.3309448818897636 249.1799999999148838 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+311.0999999999999659 542.8309448818897636 Td
+(* 1. Variáveis & Reset: Definir as variáveis de cor) Tj
+T* (\(--azul-1, --azul-2, etc.\) e os estilos de reset/tipografia) Tj
+T* (básica.) Tj
+T* (* 2. Estilização de Componentes: Criar o CSS para o) Tj
+T* (header, nav, .card, .carousel \(sem a animação de) Tj
+T* (movimento\) e footer.) Tj
+T* (* 3. Responsividade: Implementar todos os media) Tj
+T* (queries para adaptar o layout a telas menores) Tj
+T* (\(tamanho da fonte, quebra do hero-grid, ajuste do) Tj
+T* (carrossel\).) Tj
+T* (* 4. Estilização de Foco/Hover: Aplicar o) Tj
+T* (var\(--focus-shadow\) e os estilos de hover para) Tj
+T* (garantir a usabilidade.) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+40. 396.8309448818897636 73.4000000000000057 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 383.3309448818897636 Td
+(Interatividade) Tj
+T* (& Lógica) Tj
+T* (\(JavaScript) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+113.4000000000000057 396.8309448818897636 71.2999999999999972 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+118.3999999999999915 383.3309448818897636 Td
+(Carolina e) Tj
+T* (Vanessa) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+184.6999999999999886 396.8309448818897636 60.5999999999999943 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+189.6999999999999886 383.3309448818897636 Td
+(2025-11-05) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+245.3000000000000114 396.8309448818897636 60.8000000000000043 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+250.2999999999999829 383.3309448818897636 Td
+(5) Tj
+ET
+0.96 g
+0.78 G
+0. w
+0.96 g
+306.1000000000000227 396.8309448818897636 249.1799999999148838 -159.4999999999999716 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+311.0999999999999659 383.3309448818897636 Td
+(* 1. Lógica do Carrossel \(JS\): Escrever a função JS) Tj
+T* (para fazer o carrossel deslizar, trocar slides ao clicar) Tj
+T* (nos botões/indicadores e implementar a) Tj
+T* (funcionalidade de autoplay.) Tj
+T* (* 2. Gráfico \(JS\): Inicializar o Chart.js) Tj
+T* (\(graficoIncidencia\), configurar os dados, cores e) Tj
+T* (opções do gráfico de barras.) Tj
+T* (* 3. Funções Auxiliares: Implementar a lógica JS para) Tj
+T* (o botão "Voltar ao Topo" \(#btnTopo\) e o fix de foco do) Tj
+T* (skip-link.) Tj
+T* (* 4. Teste de Usabilidade: Fazer os testes iniciais de) Tj
+T* (interatividade \(carrossel e gráfico\) e de navegação por) Tj
+T* (teclado.) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+40. 237.3309448818897351 73.4000000000000057 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+45. 223.8309448818897636 Td
+(Etapa Final) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+113.4000000000000057 237.3309448818897351 71.2999999999999972 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+118.3999999999999915 223.8309448818897636 Td
+(Carolina,) Tj
+T* (Vanessa e) Tj
+T* (Camila) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+184.6999999999999886 237.3309448818897351 60.5999999999999943 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+189.6999999999999886 223.8309448818897636 Td
+(2025-11-07) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+245.3000000000000114 237.3309448818897351 60.8000000000000043 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+250.2999999999999829 223.8309448818897636 Td
+(5) Tj
+ET
+1. g
+0.78 G
+0. w
+1. g
+306.1000000000000227 237.3309448818897351 249.1799999999148838 -44.4999999999999929 re
+f
+BT
+/F1 10 Tf
+11.5 TL
+0.314 g
+311.0999999999999659 223.8309448818897636 Td
+(Testes) Tj
+ET
+0. G
+0.5670000000000001 w
+0.78 G
+0. w
+0. G
+0.5670000000000001 w
+0. G
+0.5670000000000001 w
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20251106232454-03'00')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000007646 00000 n 
+0000009463 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000007703 00000 n 
+0000007828 00000 n 
+0000007958 00000 n 
+0000008091 00000 n 
+0000008228 00000 n 
+0000008351 00000 n 
+0000008480 00000 n 
+0000008612 00000 n 
+0000008748 00000 n 
+0000008876 00000 n 
+0000009003 00000 n 
+0000009132 00000 n 
+0000009265 00000 n 
+0000009367 00000 n 
+0000009711 00000 n 
+0000009797 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <0FB6003FD5A68C4D99F12EBCCE0ACD50> <0FB6003FD5A68C4D99F12EBCCE0ACD50> ]
+>>
+startxref
+9901
+%%EOF
